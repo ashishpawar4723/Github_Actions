@@ -10,4 +10,8 @@ jobs:
             - name: Print welcome message
               run: echo "Welcome to my workflow!"
 
-
+    my-job2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print current date and time
+              run: echo "Current date and time:"
