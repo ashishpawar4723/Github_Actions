@@ -7,11 +7,11 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Print welcome message
-              run: echo "Welcome to my workflow!"
+            - name: checkout code
+              uses: actions/checkout@v2
 
-    my-job2:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Print current date and time
-              run: echo "Current date and time:"
+            - name: docker build
+              run: docker build -t my-myntra .
+
+            - name: check docker image
+              run: docker images 
